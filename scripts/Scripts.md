@@ -68,26 +68,40 @@ references/
   ```
 
 ### การตั้งค่า
-1. คัดลอก `scripts/.env.example` เป็น `.env` ใน root
-2. ใส่ `GROQ_API_KEY` ของคุณใน `.env`
+1. คัดลอก `scripts/.env.example` เป็น `scripts/.env`
+2. ใส่ `GROQ_API_KEY` ของคุณใน `scripts/.env`
 3. วางไฟล์ `.mp4` ใน `raw/`
 
 ### วิธีใช้
-```python
-from scripts.transcribe import transcribe
 
-srt_path = transcribe("raw/livestream-2026-06-10.mp4")
-print(f"Saved: {srt_path}")
-```
-
-หรือรันตรง:
+รันตรง (แนะนำ):
 ```bash
+# .srt อย่างเดียว (ค่าเริ่มต้น)
+python scripts/transcribe.py "raw/livestream-2026-06-10.mp4"
+
+# .srt + .json
+python scripts/transcribe.py "raw/livestream-2026-06-10.mp4" --srt --json
+
+# พร้อม word-level timestamps
+python scripts/transcribe.py "raw/livestream-2026-06-10.mp4" --json --word-by-word
+
+# auto-scan ทุกไฟล์ใน raw/
 python scripts/transcribe.py
 ```
 
+### Flags
+| Flag | รายละเอียด |
+|------|-----------|
+| `--srt` | สร้างไฟล์ `.srt` (subtitle) |
+| `--json` | สร้างไฟล์ `.json` (segments + words) |
+| `--word-by-word` | เพิ่ม timestamp ระดับคำใน JSON |
+
 ### Output
-- `raw/livestream-2026-06-10.srt` — subtitle พร้อม timestamp
+- `raw/<filename>.srt` — subtitle พร้อม timestamp
+- `raw/<filename>.json` — segments + words สำหรับวิเคราะห์ (ถ้าใช้ `--json`)
+
+> ไฟล์ >25MB จะ auto-split เป็น chunk 10 นาทีโดยอัตโนมัติ
 
 ---
 
-> 💡 ดู Workflow หลักได้ที่ [[WorkFlows#Step-2-วิเคราะห์เนื้อหาแบบช่วงเวลา]]
+> 💡 ดู Workflow หลักได้ที่ [[WorkFlows#step-2-ถอดเสียงและวิเคราะห์เนื้อหา]]

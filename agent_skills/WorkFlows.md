@@ -17,11 +17,15 @@
 
 ## Step 2: ถอดเสียงและวิเคราะห์เนื้อหา
 
-1. **ถอดเสียงด้วย Groq API** — ใช้ `scripts/transcribe.py` ถอดเสียง `.mp4` ใน `raw/` เป็น `.srt`
-   ```python
-   from scripts.transcribe import transcribe
-   srt_path = transcribe("raw/livestream-2026-06-10.mp4")
+1. **ถอดเสียงด้วย Groq API** — ใช้ `scripts/transcribe.py` ถอดเสียง `.mp4` ใน `raw/` เป็น `.srt` และ `.json`
+   ```bash
+   python scripts/transcribe.py "raw/livestream-2026-06-10.mp4" --srt --json
    ```
+   - `--srt` — สร้างไฟล์ `.srt` (subtitle)
+   - `--json` — สร้างไฟล์ `.json` (segments + words สำหรับวิเคราะห์)
+   - `--word-by-word` — เพิ่ม timestamp ระดับคำ (optional)
+   - ถ้าไม่ระบุไฟล์ จะ auto-scan `raw/` ทั้งโฟลเดอร์
+   - ไฟล์ >25MB จะ auto-split เป็น chunk 10 นาทีผ่าน ffmpeg
 2. **วิเคราะห์ transcript** — ใช้ `.srt` ที่ได้ค้นหาช่วงเวลาที่น่าสนใจ:
    - เหตุการณ์วุ่นวาย, จังหวะตลก, การโต้ตอบที่น่าสนใจ
    - จุดที่มีอารมณ์พุ่งสูงหรือเหตุการณ์สำคัญที่น่าจดจำ
