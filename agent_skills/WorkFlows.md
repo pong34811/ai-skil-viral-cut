@@ -69,16 +69,22 @@
 
 1. สร้างรายการ Viral Cut ตามรูปแบบใน [[Skills#5-output-schema]]
 2. สำหรับแต่ละ cut:
-   - Category
-   - ชื่อคลิป
-   - เวลาเริ่มต้นและสิ้นสุด (HH:MM)
-   - ความยาวคลิป
-   - Viral Score
-   - เหตุผลโดยย่อ
+   - ประเภท (Category)
+   - ชื่อคลิป (ตั้งชื่อให้น่าสนใจและดึงดูดผู้ชม)
+   - เวลาเริ่มต้น (HH:MM:SS)
+   - เวลาสิ้นสุด (HH:MM:SS)
+   - ชื่อไฟล์นำเข้า (.mp4)
+   - ความยาวคลิป (Duration)
 3. ตรวจสอบความถูกต้องผ่าน Quality Checklist ใน [[Rules]]
 
 ## Step 6: (Optional) Export & ส่งมอบ
 
-1. (Optional) Export รายการเป็น JSON / CSV สำหรับการตัดต่ออัตโนมัติ
-2. (Optional) สร้างไฟล์ EDL (Edit Decision List) สำหรับโปรแกรมตัดต่อ
-3. ส่งมอบรายการให้ผู้ใช้
+1. (Optional) Export รายการเป็น Excel (`.xlsx`) โดยใช้ Python script: `scripts/export_viral_cuts.py`
+   - ใช้ library `openpyxl`
+   - รองรับการ export เป็นไฟล์ Excel ที่มีฟอร์แมตหัวตาราง, Auto Filter, และ Column Widths ที่เหมาะสม
+   - ดูรายละเอียดเพิ่มเติมที่ [[../scripts/Scripts]]
+   - วิธีใช้:
+     ```python
+     from scripts.export_viral_cuts import export_viral_cuts_to_excel
+     export_viral_cuts_to_excel(cuts, output_path="viral_cuts.xlsx")
+     ```
