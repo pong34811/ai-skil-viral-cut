@@ -32,7 +32,7 @@ cuts = [
     }
 ]
 
-export_all(cuts, date_str="2026-06-10")
+export_all(cuts)  # ไม่ต้องระบุ date_str ใช้ UTC auto
 ```
 
 #### `export_viral_cuts_to_excel(cuts, output_path)`

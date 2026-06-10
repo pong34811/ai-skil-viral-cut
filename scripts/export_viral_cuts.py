@@ -1,10 +1,13 @@
 import openpyxl
 from openpyxl.styles import Font, Alignment, PatternFill, Border, Side
 from openpyxl.utils import get_column_letter
-from datetime import datetime
+from datetime import datetime, timezone
 import os
 
-def export_viral_cuts_to_excel(cuts, output_path="viral_cuts.xlsx"):
+def export_viral_cuts_to_excel(cuts, output_path=None):
+    if output_path is None:
+        today = datetime.now(timezone.utc).strftime("%Y-%m-%d")
+        output_path = f"viral-cut-{today}.xlsx"
     wb = openpyxl.Workbook()
     ws = wb.active
     ws.title = "Viral Cuts"
@@ -65,7 +68,7 @@ def export_viral_cuts_to_excel(cuts, output_path="viral_cuts.xlsx"):
 
 def export_all(cuts, date_str=None):
     if date_str is None:
-        date_str = datetime.now().strftime("%Y-%m-%d")
+        date_str = datetime.now(timezone.utc).strftime("%Y-%m-%d")
 
     filename = f"viral-cut-{date_str}"
 
@@ -95,4 +98,4 @@ if __name__ == "__main__":
             "duration": "3 นาที 20 วินาที"
         }
     ]
-    export_all(example_cuts, date_str="2026-06-10")
+    export_all(example_cuts)

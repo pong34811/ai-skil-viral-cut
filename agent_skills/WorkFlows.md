@@ -82,7 +82,7 @@
 1. **Export หลัก** — ใช้ `scripts/export_viral_cuts.py`:
    ```python
    from scripts.export_viral_cuts import export_all
-   export_all(cuts, date_str="YYYY-MM-DD")
+   export_all(cuts)  # auto ใช้วันที่ UTC ปัจจุบัน
    ```
    - `outputs/viral-cut-YYYY-MM-DD.xlsx` — ไฟล์ผลลัพธ์หลัก
    - `references/YYYY-MM-DD/viral-cut-YYYY-MM-DD.xlsx` — ไฟล์อ้างอิง
