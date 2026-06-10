@@ -1,0 +1,18 @@
+# Obsidian
+.obsidian/workspace.json
+.obsidian/workspace.json.backup
+.obsidian/plugins/better-word-count/data.json
+.obsidian/plugins/*/data.json
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Temp
+*.tmp
+*.temp
+~$*
+
+# Node / dev (if any)
+node_modules/

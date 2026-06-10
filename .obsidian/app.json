@@ -1,1 +1,12 @@
-{}
+{
+  "alwaysUpdateLinks": true,
+  "attachmentFolderPath": "./attachments",
+  "newFileLocation": "current",
+  "showUnsupportedFiles": true,
+  "useTab": false,
+  "tabSize": 2,
+  "readableLineLength": true,
+  "strictLineBreaks": true,
+  "showFrontmatter": true,
+  "propertiesInDocument": "visible"
+}
