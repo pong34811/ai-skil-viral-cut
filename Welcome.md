@@ -27,19 +27,10 @@
 ## สถานะล่าสุด (2026-06-10)
 
 ✅ **ถอดเสียง:** `raw/2789194443-194837833-1573b8fc-cffa-4faf-85ee-7ce7abe38671.mp4` → `.srt` + `.json`
+✅ **เนื้อหา:** Castle Crashers — สร้าง `contents/castle crashers.md`
 ✅ **วิเคราะห์:** พบ 6 Viral Cuts (คะแนน 5.8-7.4/10)
 ✅ **Export:** `outputs/viral-cut-2026-06-10.xlsx`
-✅ **อ้างอิง:** อัปเดต [[agent_skills/References]] แล้ว
-
-### Top Cuts
-| # | เวลา | หมวด | คะแนน |
-|---|------|------|:----:|
-| 1 | 00:54:53 | Chaos โรบินฮูช | **7.4** |
-| 2 | 00:19:08 | Chaos CPR | **7.4** |
-| 3 | 00:08:36 | Plot Twist | **6.3** |
-| 4 | 00:42:30 | Interaction | **6.1** |
-| 5 | 00:34:40 | Humor | **5.9** |
-| 6 | 01:09:15 | Emotion | **5.8** |
+✅ **อ้างอิง:** [[agent_skills/References]]
 
 ---
 
