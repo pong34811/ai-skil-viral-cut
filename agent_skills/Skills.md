@@ -44,10 +44,19 @@ Cut #1
 ────────────────────────────────────────────
 ```
 
-## 6. ตัวอย่าง (Example)
+## 6. วิธีเริ่มทำงาน
+
+ให้ AI อ่านและปฏิบัติตาม checklist ใน [[plan]] เท่านั้น
+
+1. ผู้ใช้ส่ง prompt พร้อม `video_path`, `title`, `metadata`
+2. AI เปิด `agent_skills/plan.md` และทำตาม `[ ]` ทีละขั้นตอน
+3. เมื่อจบแต่ละ step ให้ติ๊ก `[x]` เสร็จแล้วแจ้งผู้ใช้
+
+## 7. ตัวอย่าง (Example)
 
 **Input:**
 ```
+เริ่มงานตาม agent_skill
 video_path: raw/livestream-2026-06-10.mp4
 title: "ไลฟ์เล่นเกมกลางคืน"
 duration: 3:45:00
@@ -55,7 +64,7 @@ duration: 3:45:00
 
 **Output (ตัวอย่าง):** ดูตัวอย่างผลงานจริงได้ที่ [[References]]
 
-## 7. Tools & Integration
+## 8. Tools & Integration
 - **FFmpeg** — ตัดต่อ, วิเคราะห์, ดึงข้อมูลวิดีโอ
 - **Groq API (Whisper)** — ถอดเสียง `.mp4` เป็น `.srt` / `.json` ผ่าน `scripts/transcribe.py` (auto-chunk ไฟล์ >25MB)
 - **Python Scripts** — `scripts/transcribe.py` (ถอดเสียง), `scripts/export_viral_cuts.py` (export Excel)
