@@ -33,12 +33,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Viral-Cut-Skill.md",
+                "file": "Welcome.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Viral-Cut-Skill"
+              "title": "Welcome"
             }
           }
         ]
@@ -114,7 +114,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Viral-Cut-Skill.md",
+                "file": "Welcome.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -124,7 +124,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for Viral-Cut-Skill"
+              "title": "Backlinks for Welcome"
             }
           },
           {
@@ -133,12 +133,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Viral-Cut-Skill.md",
+                "file": "Welcome.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links from Viral-Cut-Skill"
+              "title": "Outgoing links from Welcome"
             }
           },
           {
@@ -176,13 +176,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Viral-Cut-Skill.md",
+                "file": "Welcome.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of Viral-Cut-Skill"
+              "title": "Outline of Welcome"
             }
           }
         ]
@@ -205,8 +205,13 @@
   },
   "active": "b082cb959ceeb359",
   "lastOpenFiles": [
+    "agent_skills/WorkFlows.md",
+    "agent_skills/Rules.md",
+    "agent_skills/skill.md",
+    "agent_skills",
+    "Welcome.md",
+    "Viral-Cut-Rules.md",
     "Viral-Cut-Workflow.md",
-    "Viral-Cut-Skill.md",
-    "Welcome.md"
+    "Viral-Cut-Skill.md"
   ]
 }

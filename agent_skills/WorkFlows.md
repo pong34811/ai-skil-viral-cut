@@ -1,6 +1,6 @@
 # Workflow: Viral Cut Detection Pipeline
 
-> ไฟล์นี้เป็นส่วนหนึ่งของ [[Viral-Cut-Skill]] — ดูเพิ่มเติมที่ [[Viral-Cut-Rules]]
+> ไฟล์นี้เป็นส่วนหนึ่งของ [[skill]] — ดูเพิ่มเติมที่ [[Rules]]
 
 ---
 
@@ -20,7 +20,7 @@
 1. แบ่งวิดีโอเป็นช่วงย่อย (segment) ตามความยาวที่เหมาะสม:
    - สำหรับคลิปสั้น: segment ละ 30-60 วินาที
    - สำหรับคลิปยาว: segment ละ 1-3 นาที
-2. วิเคราะห์แต่ละ segment ตามเกณฑ์ใน [[Viral-Cut-Skill#4-เกณฑ์การวิเคราะห์-viral-cut-detection-criteria]]
+2. วิเคราะห์แต่ละ segment ตามเกณฑ์ใน [[skill#4-เกณฑ์การวิเคราะห์-viral-cut-detection-criteria]]
 3. บันทึกคะแนนแต่ละด้านพร้อมหมายเหตุ
 
 ## Step 3: ประเมินศักยภาพไวรัล (Viral Potential Scoring)
@@ -51,7 +51,7 @@
 
 ## Step 5: สร้าง Output ตาม Schema
 
-1. สร้างรายการ Viral Cut ตามรูปแบบใน [[Viral-Cut-Skill#5-output-schema]]
+1. สร้างรายการ Viral Cut ตามรูปแบบใน [[skill#5-output-schema]]
 2. สำหรับแต่ละ cut:
    - Category
    - ชื่อคลิป
@@ -60,7 +60,7 @@
    - ความยาวคลิป
    - Viral Score
    - เหตุผลโดยย่อ
-3. ตรวจสอบความถูกต้องผ่าน Quality Checklist ใน [[Viral-Cut-Rules]]
+3. ตรวจสอบความถูกต้องผ่าน Quality Checklist ใน [[Rules]]
 
 ## Step 6: (Optional) Export & ส่งมอบ
 
