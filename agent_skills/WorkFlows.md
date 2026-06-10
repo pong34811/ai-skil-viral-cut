@@ -1,6 +1,6 @@
 # Workflow: Viral Cut Detection Pipeline
 
-> ไฟล์นี้เป็นส่วนหนึ่งของ [[skill]] — ดูเพิ่มเติมที่ [[Rules]]
+> ไฟล์นี้เป็นส่วนหนึ่งของ [[Skills]] — ดูเพิ่มเติมที่ [[Rules]]
 
 ---
 

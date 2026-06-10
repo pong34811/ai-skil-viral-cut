@@ -1,6 +1,6 @@
 # Rules & Constraints: Viral Cut Detection
 
-> ไฟล์นี้เป็นส่วนหนึ่งของ [[skill]] — ดู Workflow ที่ [[WorkFlows]]
+> ไฟล์นี้เป็นส่วนหนึ่งของ [[Skills]] — ดู Workflow ที่ [[WorkFlows]]
 
 ---
 
