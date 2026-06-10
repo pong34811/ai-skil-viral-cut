@@ -6,6 +6,7 @@
 
 ```
 ├── agent_skills/
+│   ├── References.md      — ตัวอย่างผลงานจริง ใช้อ้างอิง
 │   ├── Skills.md          — ภาพรวม Skill, เกณฑ์วิเคราะห์ 6 ด้าน, Output Schema
 │   ├── WorkFlows.md       — ขั้นตอนการทำงาน 6 Step
 │   └── Rules.md           — ข้อจำกัด, หลักเกณฑ์, Quality Checklist
@@ -25,4 +26,5 @@
 2. เปิด [[agent_skills/Skills]] เพื่อดูเกณฑ์การวิเคราะห์
 3. ดู [[agent_skills/WorkFlows]] สำหรับขั้นตอน
 4. ตรวจสอบ [[agent_skills/Rules]] สำหรับข้อควรระวัง
-5. ใช้ [[scripts/Scripts]] สำหรับ Export ผลลัพธ์
+5. ดู [[agent_skills/References]] สำหรับตัวอย่างผลงานที่ผ่านมา
+6. ใช้ [[scripts/Scripts]] สำหรับ Export ผลลัพธ์
