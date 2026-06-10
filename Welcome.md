@@ -28,7 +28,7 @@
 
 ✅ **ถอดเสียง:** `raw/2789194443-194837833-1573b8fc-cffa-4faf-85ee-7ce7abe38671.mp4` → `.srt` + `.json`
 ✅ **เนื้อหา:** Castle Crashers — สร้าง `contents/castle crashers.md`
-✅ **วิเคราะห์:** พบ 6 Viral Cuts (คะแนน 5.8-7.4/10)
+✅ **วิเคราะห์:** พบ 5 Viral Cuts (ระยะ 1-3 นาที, คะแนน 7-8/10)
 ✅ **Export:** `outputs/viral-cut-2026-06-10.xlsx`
 ✅ **อ้างอิง:** [[agent_skills/References]]
 

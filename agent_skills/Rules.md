@@ -26,14 +26,18 @@
 
 ## 2. ข้อจำกัดด้านระยะเวลา (Duration Rules)
 
-### 2.1 Short-form Content
+### 2.1 ระยะห้ามต่ำกว่า
+- **Viral Cut ทุกประเภทต้องมีความยาว ≥ 1 นาที (60 วินาที) เสมอ**
+- ถ้าช่วงที่น่าสนใจสั้นกว่า ให้ขยายขอบเขตให้ครบ 1 นาที โดยรักษาบริบทโดยรอบ
+
+### 2.2 Short-form Content
 | แพลตฟอร์ม | ระยะเวลาแนะนำ |
 |-----------|-------------|
-| TikTok | 15-60 วินาที |
-| YouTube Shorts | 15-60 วินาที |
-| Instagram Reels | 15-90 วินาที |
+| TikTok | 1-3 นาที |
+| YouTube Shorts | 1-3 นาที |
+| Instagram Reels | 1-3 นาที |
 
-### 2.2 Long-form Content
+### 2.3 Long-form Content
 - ระยะเวลา: 3-10 นาที
 - เหมาะสำหรับ YouTube, Facebook
 
