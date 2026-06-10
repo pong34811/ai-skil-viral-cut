@@ -20,6 +20,13 @@ node_modules/
 # Audio temp
 *.wav
 
+# Raw video files
+*.mp4
+raw/
+
+# Generated outputs
+outputs/
+
 # Python cache
 __pycache__/
 *.pyc
