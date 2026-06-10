@@ -1,7 +1,8 @@
 import openpyxl
 from openpyxl.styles import Font, Alignment, PatternFill, Border, Side
 from openpyxl.utils import get_column_letter
-from datetime import timedelta
+from datetime import datetime
+import os
 
 def export_viral_cuts_to_excel(cuts, output_path="viral_cuts.xlsx"):
     wb = openpyxl.Workbook()
@@ -11,12 +12,9 @@ def export_viral_cuts_to_excel(cuts, output_path="viral_cuts.xlsx"):
     header_font = Font(name="Arial", bold=True, color="FFFFFF", size=11)
     header_fill = PatternFill(start_color="2F5496", end_color="2F5496", fill_type="solid")
     header_align = Alignment(horizontal="center", vertical="center", wrap_text=True)
-
     thin_border = Border(
-        left=Side(style="thin"),
-        right=Side(style="thin"),
-        top=Side(style="thin"),
-        bottom=Side(style="thin"),
+        left=Side(style="thin"), right=Side(style="thin"),
+        top=Side(style="thin"), bottom=Side(style="thin"),
     )
 
     headers = [
@@ -60,8 +58,22 @@ def export_viral_cuts_to_excel(cuts, output_path="viral_cuts.xlsx"):
 
     ws.auto_filter.ref = f"A1:G{len(cuts) + 1}"
 
+    os.makedirs(os.path.dirname(output_path) if os.path.dirname(output_path) else ".", exist_ok=True)
     wb.save(output_path)
     return output_path
+
+
+def export_all(cuts, date_str=None):
+    if date_str is None:
+        date_str = datetime.now().strftime("%Y-%m-%d")
+
+    filename = f"viral-cut-{date_str}"
+
+    out = export_viral_cuts_to_excel(cuts, output_path=f"outputs/{filename}.xlsx")
+    print(f"Output: {out}")
+
+    ref = export_viral_cuts_to_excel(cuts, output_path=f"references/{date_str}/{filename}.xlsx")
+    print(f"Reference: {ref}")
 
 
 if __name__ == "__main__":
@@ -83,5 +95,4 @@ if __name__ == "__main__":
             "duration": "3 นาที 20 วินาที"
         }
     ]
-    path = export_viral_cuts_to_excel(example_cuts)
-    print(f"Exported to {path}")
+    export_all(example_cuts, date_str="2026-06-10")

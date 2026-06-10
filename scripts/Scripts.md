@@ -6,7 +6,7 @@
 
 ## `export_viral_cuts.py`
 
-Export รายการ Viral Cut เป็นไฟล์ Excel (`.xlsx`)
+Export รายการ Viral Cut ไปยัง `outputs/` และ `references/`
 
 ### Dependencies
 - `openpyxl`
@@ -14,10 +14,12 @@ Export รายการ Viral Cut เป็นไฟล์ Excel (`.xlsx`)
   pip install openpyxl
   ```
 
-### วิธีใช้
+### ฟังก์ชันหลัก
 
+#### `export_all(cuts, date_str=None)`
+Export ไปยัง `outputs/` และ `references/` พร้อมกัน:
 ```python
-from scripts.export_viral_cuts import export_viral_cuts_to_excel
+from scripts.export_viral_cuts import export_all
 
 cuts = [
     {
@@ -30,21 +32,27 @@ cuts = [
     }
 ]
 
-export_viral_cuts_to_excel(cuts, output_path="viral_cuts.xlsx")
+export_all(cuts, date_str="2026-06-10")
 ```
 
-หรือรันตรง:
+#### `export_viral_cuts_to_excel(cuts, output_path)`
+Export เฉพาะ Excel ไปยัง path ที่กำหนด
+
+### รันตรง
 ```bash
 python scripts/export_viral_cuts.py
 ```
 
-### Output
-- ไฟล์ Excel `.xlsx` พร้อม:
-  - หัวตารางสีน้ำเงินเข้ม ตัวอักษรสีขาว
-  - Auto Filter
-  - Column widths ปรับอัตโนมัติ
-  - หัวคอลัมน์: #, ประเภท (Category), ชื่อคลิป, เวลาเริ่มต้น, เวลาสิ้นสุด, ชื่อไฟล์นำเข้า (.mp4), ความยาวคลิป (Duration)
+### โครงสร้าง Output
+```
+outputs/
+  viral-cut-2026-06-10.xlsx
+
+references/
+  2026-06-10/
+    viral-cut-2026-06-10.xlsx
+```
 
 ---
 
-> 💡 ดู Workflow หลักได้ที่ [[WorkFlows#Step-6-optional-export--ส่งมอบ]]
+> 💡 ดู Workflow หลักได้ที่ [[WorkFlows#Step-6-export--ส่งมอบ]]

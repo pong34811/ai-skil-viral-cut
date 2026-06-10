@@ -6,8 +6,8 @@
 
 ## Step 1: รับและตรวจสอบไฟล์นำเข้า
 
-1. รับไฟล์ `.mp4` จากผู้ใช้ (ไฟล์ที่บันทึกจากการไลฟ์สตรีม)
-2. ตรวจสอบว่าไฟล์มีอยู่จริงและสามารถอ่านได้
+1. รับไฟล์ `.mp4` จากผู้ใช้ วางไว้ในโฟลเดอร์ `raw/`
+2. ตรวจสอบว่าไฟล์ใน `raw/` มีอยู่จริงและสามารถอ่านได้
 3. ดึงข้อมูลพื้นฐานของวิดีโอ:
    - ความยาวรวม (duration)
    - Resolution
@@ -77,14 +77,27 @@
    - ความยาวคลิป (Duration)
 3. ตรวจสอบความถูกต้องผ่าน Quality Checklist ใน [[Rules]]
 
-## Step 6: (Optional) Export & ส่งมอบ
+## Step 6: Export & ส่งมอบ
 
-1. (Optional) Export รายการเป็น Excel (`.xlsx`) โดยใช้ Python script: `scripts/export_viral_cuts.py`
-   - ใช้ library `openpyxl`
-   - รองรับการ export เป็นไฟล์ Excel ที่มีฟอร์แมตหัวตาราง, Auto Filter, และ Column Widths ที่เหมาะสม
-   - ดูรายละเอียดเพิ่มเติมที่ [[../scripts/Scripts]]
-   - วิธีใช้:
-     ```python
-     from scripts.export_viral_cuts import export_viral_cuts_to_excel
-     export_viral_cuts_to_excel(cuts, output_path="viral_cuts.xlsx")
-     ```
+1. **Export หลัก** — ใช้ `scripts/export_viral_cuts.py`:
+   ```python
+   from scripts.export_viral_cuts import export_all
+   export_all(cuts, date_str="YYYY-MM-DD")
+   ```
+   - `outputs/viral-cut-YYYY-MM-DD.xlsx` — ไฟล์ผลลัพธ์หลัก
+   - `references/YYYY-MM-DD/viral-cut-YYYY-MM-DD.xlsx` — ไฟล์อ้างอิง
+
+2. โครงสร้างไฟล์หลัง export:
+   ```
+   outputs/
+     viral-cut-2026-06-10.xlsx
+   references/
+     2026-06-10/
+       viral-cut-2026-06-10.xlsx
+   ```
+
+3. (Optional) Export เพิ่มเติมเป็น JSON / CSV / EDL สำหรับการตัดต่อ
+
+4. ส่งมอบรายการให้ผู้ใช้
+
+> ดูรายละเอียดเพิ่มเติมที่ [[../scripts/Scripts]]
