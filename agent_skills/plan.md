@@ -83,8 +83,8 @@ export_all(cuts)
 ## [ ] Step 6: อัปเดตไฟล์
 
 - [ ] **agent_skills/References.md** — เพิ่มรายการ cuts ล่าสุด
+- [ ] **agent_skills/contents.md** — ถ้ามีเกมใหม่ เพิ่มแถวในตารางลิงค์ไป `contents/{ชื่อเกม}`
 - [ ] **Welcome.md** — อัปเดตสถานะโปรเจกต์
-- [ ] **contents/{game}.md** — ถ้ามีข้อมูลเกมใหม่ เพิ่ม/อัปเดต
 
 ## [ ] ข้อควรระวัง
 
