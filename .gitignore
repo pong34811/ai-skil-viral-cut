@@ -19,3 +19,7 @@ node_modules/
 
 # Audio temp
 *.wav
+
+# Python cache
+__pycache__/
+*.pyc

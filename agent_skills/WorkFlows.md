@@ -32,31 +32,8 @@
 ## Step 3: ประเมินศักยภาพไวรัล (Viral Potential Scoring)
 
 1. ให้คะแนนแต่ละ segment ในแต่ละเกณฑ์ (1-10)
-2. คำนวณคะแนนรวมแบบถ่วงน้ำหนัก โดยอ้างอิงจากหลายแหล่ง:
-
-| เกณฑ์ | น้ำหนัก | อ้างอิง |
-|-------|--------|--------|
-| Emotion Spike | 20% | OpusClip (Hook/Flow/Value/Trend — emotional resonance factor), Munch AI (emotional peaks), Transcriptr (multi-signal fusion) |
-| Chaos / Conflict | 20% | Archive Virality Score (engagement velocity signal), Eyko AI (identity signal, story arc) |
-| Humor / Comedy Timing | 20% | Transcriptr (NLP speech pattern analysis), Higgsfield AI (hook retention window) |
-| Interaction Hook | 15% | OpusClip (Hook strength factor), Quso AI (hook strength, narrative arc) |
-| Plot Twist / Unexpected | 15% | Eyko AI (novelty detection, share-prompted format), Transcriptr (story arc detection) |
-| Educational / Insight | 10% | OpusClip (Value factor — emotional & educational resonance), Quso AI (viewer value) |
-
+2. คำนวณคะแนนรวมแบบถ่วงน้ำหนัก (ดูรายละเอียดที่ [[Viral-Cut-Detection]])
 3. **คะแนนรวม =** (Emotion × 0.2) + (Chaos × 0.2) + (Humor × 0.2) + (Interaction × 0.15) + (PlotTwist × 0.15) + (Educational × 0.1)
-
-### ข้อมูลอ้างอิงหลัก (Sources)
-
-| Source | รายละเอียด | ปี |
-|--------|-----------|----|
-| **OpusClip Virality Score** | วิเคราะห์ Hook, Flow, Value, Trend เพื่อให้คะแนน 0-99 ต่อ clip ([help.opus.pro](https://help.opus.pro/docs/article/virality-score)) | 2026 |
-| **Munch AI** | ใช้ trending keywords, emotional peaks, speech patterns ในการวัดศักยภาพ ([getmunch.com](https://www.getmunch.com/)) | 2025 |
-| **Archive Virality Score** | วัด view velocity + total views, แบ่งเป็น 4 tiers (High/Medium/Low/Not Viral) ([help.archive.com](https://help.archive.com/en/articles/14456753-understanding-archive-s-virality-score-metrics-updates)) | 2026 |
-| **Transcriptr — Multi-Signal Fusion** | รวมคะแนนจาก NLP + Audio + Visual + Engagement ด้วย weighted model ([transcriptr.ai](https://transcriptr.ai/blog/ai-viral-moment-detection)) | 2026 |
-| **Eyko AI — Viral Potential Scoring** | วัด emotional resonance, novelty, identity signal, story arc, share-prompted format ([eyko.ai](https://eyko.ai/ideas/viral-potential-scoring/)) | 2026 |
-| **Quso AI (Vidyo AI)** | วัด hook strength, narrative arc, viewer value, trend alignment ([filmora.wondershare.com](https://filmora.wondershare.com/video-editor-review/quso-ai-review.html)) | 2026 |
-| **Higgsfield AI — Engagement Score** | วัด retention time และ hook effectiveness ใน 3 วินาทีแรก ([higgsfield.ai](https://higgsfield.ai/apps/virality-predictor)) | 2026 |
-| **YouTube Content Analyzer (Research Paper)** | ใช้ Random Forest + SMOTE + TF-IDF ทำนาย virality ด้วยความแม่นยำ 75% ([ResearchGate](https://www.researchgate.net/publication/401760676)) | 2026 |
 
 > ⚠️ **หมายเหตุ:** น้ำหนักข้างต้นเป็นค่าประมาณเริ่มต้นที่ปรับจากหลายแหล่งข้างต้น สามารถปรับเปลี่ยนได้ตามข้อมูลเชิงลึกใหม่ ๆ ควรตรวจสอบและอัปเดตสูตรเป็นระยะ
 

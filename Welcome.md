@@ -6,10 +6,11 @@
 
 ```
 ├── agent_skills/
-│   ├── References.md      — ตัวอย่างผลงานจริง ใช้อ้างอิง
-│   ├── Skills.md          — ภาพรวม Skill, เกณฑ์วิเคราะห์ 6 ด้าน, Output Schema
-│   ├── WorkFlows.md       — ขั้นตอนการทำงาน 6 Step
-│   └── Rules.md           — ข้อจำกัด, หลักเกณฑ์, Quality Checklist
+│   ├── References.md            — ตัวอย่างผลงานจริง ใช้อ้างอิง
+│   ├── Skills.md                — ภาพรวม Skill, Output Schema
+│   ├── WorkFlows.md             — ขั้นตอนการทำงาน 6 Step
+│   ├── Viral-Cut-Detection.md   — เกณฑ์วิเคราะห์ 6 ด้าน + สูตรคะแนน + แหล่งอ้างอิง
+│   └── Rules.md                 — ข้อจำกัด, หลักเกณฑ์, Quality Checklist
 ├── scripts/
 │   ├── Scripts.md         — เอกสารการใช้งาน script
 │   ├── export_viral_cuts.py — Export Excel
