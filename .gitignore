@@ -1,8 +1,5 @@
 # Obsidian
-.obsidian/workspace.json
-.obsidian/workspace.json.backup
-.obsidian/plugins/better-word-count/data.json
-.obsidian/plugins/*/data.json
+.obsidian
 
 # OS
 .DS_Store
