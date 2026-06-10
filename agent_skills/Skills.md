@@ -15,7 +15,7 @@
 ## 3. Input Format
 | ฟิลด์ | รายละเอียด |
 |-------|-----------|
-| video_path | Path ของไฟล์ .mp4 ที่บันทึกจากไลฟ์สตรีม |
+| video_path | Path ของไฟล์ .mp4 ที่บันทึกจากไลฟ์สตรีม (วางใน `raw/`) |
 | title | ชื่อคลิปไลฟ์ (ถ้ามี) |
 | duration | ความยาวรวมของวิดีโอ |
 | metadata | metadata อื่น ๆ เช่น วันที่, จำนวนผู้ชม (ถ้ามี) |
@@ -48,7 +48,7 @@ Cut #1
 
 **Input:**
 ```
-video_path: /path/to/livestream-2026-06-10.mp4
+video_path: raw/livestream-2026-06-10.mp4
 title: "ไลฟ์เล่นเกมกลางคืน"
 duration: 3:45:00
 ```
@@ -57,7 +57,9 @@ duration: 3:45:00
 
 ## 7. Tools & Integration
 - **FFmpeg** — ตัดต่อ, วิเคราะห์, ดึงข้อมูลวิดีโอ
-
+- **Groq API (Whisper)** — ถอดเสียง `.mp4` เป็น `.srt` / `.json` ผ่าน `scripts/transcribe.py`
+- **Python Scripts** — `scripts/transcribe.py` (ถอดเสียง), `scripts/export_viral_cuts.py` (export Excel)
+- **.env** — เก็บ `GROQ_API_KEY` สำหรับเรียกใช้ API
 - **Web Fetch** — ค้นหาข้อมูลเพิ่มเติมเกี่ยวกับเหตุการณ์หรือกระแส
 - **File System** — อ่านและตรวจสอบไฟล์วิดีโอ
 
