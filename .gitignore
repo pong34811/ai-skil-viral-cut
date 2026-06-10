@@ -13,3 +13,9 @@ desktop.ini
 
 # Node / dev (if any)
 node_modules/
+
+# API keys
+.env
+
+# Audio temp
+*.wav

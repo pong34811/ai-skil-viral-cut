@@ -55,4 +55,39 @@ references/
 
 ---
 
-> 💡 ดู Workflow หลักได้ที่ [[WorkFlows#Step-6-export--ส่งมอบ]]
+## `transcribe.py`
+
+ถอดเสียงจาก `.mp4` ใน `raw/` เป็น `.srt` โดยใช้ Groq API (Whisper)
+
+### Dependencies
+- `groq`
+- `ffmpeg` (ต้องติดตั้งในระบบ)
+- `python-dotenv` (optional สำหรับ `.env`)
+  ```bash
+  pip install groq python-dotenv
+  ```
+
+### การตั้งค่า
+1. คัดลอก `scripts/.env.example` เป็น `.env` ใน root
+2. ใส่ `GROQ_API_KEY` ของคุณใน `.env`
+3. วางไฟล์ `.mp4` ใน `raw/`
+
+### วิธีใช้
+```python
+from scripts.transcribe import transcribe
+
+srt_path = transcribe("raw/livestream-2026-06-10.mp4")
+print(f"Saved: {srt_path}")
+```
+
+หรือรันตรง:
+```bash
+python scripts/transcribe.py
+```
+
+### Output
+- `raw/livestream-2026-06-10.srt` — subtitle พร้อม timestamp
+
+---
+
+> 💡 ดู Workflow หลักได้ที่ [[WorkFlows#Step-2-วิเคราะห์เนื้อหาแบบช่วงเวลา]]

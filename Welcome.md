@@ -12,7 +12,9 @@
 │   └── Rules.md           — ข้อจำกัด, หลักเกณฑ์, Quality Checklist
 ├── scripts/
 │   ├── Scripts.md         — เอกสารการใช้งาน script
-│   └── export_viral_cuts.py — Export Excel + SRT
+│   ├── export_viral_cuts.py — Export Excel
+│   └── transcribe.py      — ถอดเสียงด้วย Groq API
+├── .env                   — API keys (ไม่เข้า git)
 ├── raw/                   — วางไฟล์ .mp4 ที่นำเข้า
 ├── outputs/               — ไฟล์ผลลัพธ์ .xlsx
 ├── references/            — ข้อมูลอ้างอิงแบ่งตามวันที่
@@ -23,8 +25,9 @@
 
 ## เริ่มต้น
 1. วางไฟล์ `.mp4` ใน `raw/`
-2. เปิด [[agent_skills/Skills]] เพื่อดูเกณฑ์การวิเคราะห์
-3. ดู [[agent_skills/WorkFlows]] สำหรับขั้นตอน
-4. ตรวจสอบ [[agent_skills/Rules]] สำหรับข้อควรระวัง
-5. ดู [[agent_skills/References]] สำหรับตัวอย่างผลงานที่ผ่านมา
-6. ใช้ [[scripts/Scripts]] สำหรับ Export ผลลัพธ์
+2. รัน `python scripts/transcribe.py` เพื่อถอดเสียง
+3. เปิด [[agent_skills/Skills]] เพื่อดูเกณฑ์การวิเคราะห์
+4. ดู [[agent_skills/WorkFlows]] สำหรับขั้นตอน
+5. ตรวจสอบ [[agent_skills/Rules]] สำหรับข้อควรระวัง
+6. ดู [[agent_skills/References]] สำหรับตัวอย่างผลงานที่ผ่านมา
+7. ใช้ [[scripts/Scripts]] สำหรับ Export ผลลัพธ์
