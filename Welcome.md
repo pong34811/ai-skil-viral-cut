@@ -24,19 +24,19 @@
 └── Welcome.md
 ```
 
-## สถานะล่าสุด (2026-06-10)
+## สถานะล่าสุด (2026-06-11)
+
+### Garena RoV Thailand #006 (ล่าสุด)
+✅ ถอดเสียง → `.srt` + `.json`
+✅ ตรวจทานคำผิด SRT
+✅ วิเคราะห์ 4 Viral Cuts
+✅ Export → `outputs/viral-cut-2026-06-11.xlsx`
+✅ สร้าง `contents/arena of valor.md`
 
 ### Castle Crashers
 ✅ ถอดเสียง → `.srt` + `.json`
 ✅ วิเคราะห์ 5 Viral Cuts (1-3 นาที)
 ✅ Export → `outputs/viral-cut-2026-06-10.xlsx`
-
-### Elsword (ล่าสุด)
-✅ ถอดเสียง → `.srt` + `.json`
-✅ ตรวจทานคำผิด SRT
-✅ วิเคราะห์ 5 Viral Cuts (1-3 นาที)
-✅ Export → `outputs/viral-cut-2026-06-10.xlsx`
-✅ สร้าง `contents/elsword.md`
 
 ---
 

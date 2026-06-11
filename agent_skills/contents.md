@@ -6,6 +6,7 @@
 
 | เกม             | ไฟล์                          | หมายเหตุ       | 
 | --------------- | ----------------------------- | -------------- |
+| Arena of Valor (RoV) | [[../contents/arena of valor]] | ✅ มีข้อมูลแล้ว |
 | Castle Crashers | [[../contents/castle crashers]] | ✅ มีข้อมูลแล้ว |
 
 ---

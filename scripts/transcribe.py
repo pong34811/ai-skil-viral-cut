@@ -1,17 +1,14 @@
-import os
-import sys
-import math
-import json
-import subprocess
-from groq import Groq
+import os, sys, math, json, subprocess, time
 from dotenv import load_dotenv
 from tqdm import tqdm
+import requests
 
 script_dir = os.path.dirname(os.path.abspath(__file__))
-dotenv_path = os.path.join(script_dir, '.env')
+dotenv_path = os.path.join(script_dir, '..', '.env')
 load_dotenv(dotenv_path)
 
-client = Groq()
+API_KEY = os.getenv('GROQ_API_KEY')
+API_URL = "https://api.groq.com/openai/v1/audio/transcriptions"
 
 MAX_SIZE_BYTES = 24 * 1024 * 1024
 
@@ -23,20 +20,22 @@ def format_srt_time(seconds):
     return f"{hours:02d}:{minutes:02d}:{secs:02d},{milliseconds:03d}"
 
 def get_groq_data(file_path, file_bytes, word_level=False):
-    kwargs = {
-        "file": (os.path.basename(file_path), file_bytes),
+    headers = {"Authorization": f"Bearer {API_KEY}"}
+    data = {
         "model": "whisper-large-v3",
         "temperature": 0,
         "response_format": "verbose_json",
     }
     if word_level:
-        kwargs["timestamp_granularities"] = ["word"]
+        data["timestamp_granularities"] = ["word"]
+    files = {"file": (os.path.basename(file_path), file_bytes, "audio/mpeg" if file_path.endswith('.mp3') else "audio/wav")}
     try:
-        response = client.audio.transcriptions.create(**kwargs)
-        data = response if isinstance(response, dict) else response.model_dump()
-        return data.get('segments') or [], data.get('words') or []
+        resp = requests.post(API_URL, headers=headers, data=data, files=files, timeout=300)
+        resp.raise_for_status()
+        result = resp.json()
+        return result.get('segments') or [], result.get('words') or []
     except Exception as e:
-        print(f"\n[API Error] Failed to process {os.path.basename(file_path)}: {e}")
+        print(f"\n[API Error] {os.path.basename(file_path)}: {e}")
         return [], []
 
 def process_file(filename, request_word_timestamps, export_srt, export_json):
