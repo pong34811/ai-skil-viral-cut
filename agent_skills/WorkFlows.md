@@ -4,6 +4,20 @@
 
 ---
 
+## Step 0: อ่าน Skill ทั้งหมดก่อนเริ่ม
+
+> ดู checklist เต็มใน [[plan#step-0-อ่าน-skill-ทั้งหมดก่อนเริ่ม]]
+
+ก่อนเริ่ม Step 1 ต้องอ่านเอกสารทั้งหมดเพื่อทำความเข้าใจภาพรวม:
+- `Skills.md` — ภาพรวม, Output Schema
+- `Rules.md` — ข้อจำกัด, AI Behavior Rules
+- `WorkFlows.md` — ขั้นตอนทั้งหมด
+- `Viral-Cut-Detection.md` — เกณฑ์วิเคราะห์ 6 ด้าน + สูตรคะแนน
+- `References.md` — ตัวอย่างผลงานก่อนหน้า
+- `contents.md` — เกมที่มีข้อมูลแล้ว
+- `plan.md` — Checklist ปฏิบัติการ
+- `.opencode/skills/viral-cut-detection/SKILL.md` — Skill definition
+
 ## Step 1: รับและตรวจสอบไฟล์นำเข้า
 
 1. รับไฟล์ `.mp4` จากผู้ใช้ วางไว้ในโฟลเดอร์ `raw/`

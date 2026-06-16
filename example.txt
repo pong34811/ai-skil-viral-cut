@@ -1,0 +1,24 @@
+เริ่มงานตาม agent_skill
+
+**video_path:** raw/<ชื่อไฟล์>.mp4
+**title:** <ชื่อไลฟ์>
+**duration:** <ชั่วโมง:นาที:วินาที>
+**type:** เกม หรือ Free talk
+**game:** <ชื่อเกม> (ใส่เฉพาะถ้า type=เกม)
+**metadata:**
+  date: YYYY-MM-DD
+  platform: YouTube / Twitch / TikTok
+  co-streamers: @username (ถ้ามี)
+
+─────────────────────────────────
+Example:
+
+เริ่มงานตาม agent_skill
+video_path: raw/2790059051-194837833-c2bfd128-e874-4ca4-9e3c-bf57b367b0bc.mp4
+title: 【🔴 LIVE】Elsword Thailand - 002 | 06/06/2026 | @NJaACh
+duration: 2:15:00
+type: เกม
+game: Elsword
+metadata:
+  date: 2026-06-06
+  platform: YouTube

@@ -24,9 +24,14 @@
 └── Welcome.md
 ```
 
-## สถานะล่าสุด (2026-06-11)
+## สถานะล่าสุด (2026-06-16)
 
-### Garena RoV Thailand #006 (ล่าสุด)
+### ลบตัวละคร Elsword (Reference clip) (ล่าสุด)
+✅ ตรวจทานคำผิด SRT
+✅ สร้าง MD ตัวอย่าง → `references/2026-06-16/ลบตัวละคร Elsword/`
+✅ อัปเดต `References.md`
+
+### Garena RoV Thailand #006
 ✅ ถอดเสียง → `.srt` + `.json`
 ✅ ตรวจทานคำผิด SRT
 ✅ วิเคราะห์ 4 Viral Cuts

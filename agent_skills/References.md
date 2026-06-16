@@ -74,4 +74,25 @@ Cut #4
 - ชื่อไฟล์นำเข้า (.mp4): 【🔴 LIVE】Garena RoV Thailand - 006_ 16_05_2026 _ @P2O4N2CH @MidveilMIIKO @Amui-san @ครามไง (1).mp4
 - ความยาวคลิป (Duration): 1 นาที 30 วินาที
 - คะแนน Viral: 6.9/10
+
+---
+
+## 2026-06-16
+
+**ไฟล์:** `references/2026-06-16/ลบตัวละคร Elsword/ลบตัวละคร Elsword.srt`
+
+**เกม:** Elsword
+
+### รายละเอียด
+
+```
+- ประเภท (Category): Emotion / Plot Twist
+- ชื่อคลิป: ลบตัวละคร Elsword
+- คำอธิบาย: สตรีมเมอร์เล่าเรื่องต้องลบตัวละครที่ลงทุน Combat 60,000 ไปเพราะชาเลนจ์ perma-death กับเพื่อน
+```
+
+| ไฟล์ | ที่อยู่ |
+|------|--------|
+| SRT | `references/2026-06-16/ลบตัวละคร Elsword/ลบตัวละคร Elsword.srt` |
+| MD | `references/2026-06-16/ลบตัวละคร Elsword/ลบตัวละคร Elsword.md` |
 ```

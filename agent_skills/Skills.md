@@ -48,9 +48,22 @@ Cut #1
 
 ให้ AI อ่านและปฏิบัติตาม checklist ใน [[plan]] เท่านั้น
 
+**ข้อสำคัญ: ก่อนเริ่ม Step 1 ทุกครั้ง AI ต้องอ่านเอกสารทั้งหมดก่อน:**
+- `agent_skills/Skills.md` — ภาพรวม
+- `agent_skills/Rules.md` — ข้อจำกัด
+- `agent_skills/WorkFlows.md` — Workflow
+- `agent_skills/Viral-Cut-Detection.md` — เกณฑ์วิเคราะห์
+- `agent_skills/References.md` — ตัวอย่างผลงาน
+- `agent_skills/contents.md` — ข้อมูลเกม
+- `agent_skills/plan.md` — Checklist
+- `.opencode/skills/viral-cut-detection/SKILL.md` — Skill definition
+
+แล้วทำตามนี้:
+
 1. ผู้ใช้ส่ง prompt พร้อม `video_path`, `title`, `metadata`
 2. AI เปิด `agent_skills/plan.md` และทำตาม `[ ]` ทีละขั้นตอน
 3. เมื่อจบแต่ละ step ให้ติ๊ก `[x]` เสร็จแล้วแจ้งผู้ใช้
+4. เมื่อจบทั้งหมด ให้อัปเดต Welcome.md + ตรวจสอบ consistency ตาม [[Rules#7.3-post-task-updates]]
 
 ## 7. ตัวอย่าง (Example)
 
