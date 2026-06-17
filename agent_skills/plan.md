@@ -12,6 +12,7 @@
 - [ ] **Rules.md** — ทำความเข้าใจข้อจำกัด, AI Behavior Rules
 - [ ] **WorkFlows.md** — ทำความเข้าใจ workflow ทีละขั้นตอน
 - [ ] **Viral-Cut-Detection.md** — ทำความเข้าใจเกณฑ์วิเคราะห์ 6 ด้าน + สูตร
+- [ ] **Personas.md** — ทำความเข้าใจกลุ่มผู้ใช้งานเป้าหมาย
 - [ ] **References.md** — ดูตัวอย่างผลงานก่อนหน้า เป็นแนวทาง
 - [ ] **contents.md** — ตรวจสอบเกมที่มีข้อมูลอยู่แล้ว
 - [ ] **plan.md** — ทำความเข้าใจ checklist ที่ต้องทำ
@@ -107,12 +108,14 @@ export_all(cuts)
 - [ ] เช็ค `outputs/viral-cut-YYYY-MM-DD.xlsx` — ผลลัพธ์หลัก
 - [ ] เช็ค `references/YYYY-MM-DD/viral-cut-YYYY-MM-DD.xlsx` — อ้างอิง
 
-## [ ] Step 6: อัปเดตไฟล์ + ตรวจสอบ Consistency
+## [ ] Step 7: อัปเดตไฟล์ + ตรวจสอบ Consistency
 
 ### อัปเดตไฟล์
 - [ ] **plan.md** — ติ๊ก `[x]` ทุก Step ที่ทำเสร็จแล้วทันที (อย่ารอเก็บทีเดียว)
 - [ ] **agent_skills/References.md** — เพิ่มรายการ cuts ล่าสุด
 - [ ] **agent_skills/contents.md** — ถ้ามีเกมใหม่ เพิ่มแถวในตารางลิงค์ไป `contents/{ชื่อเกม}`
+- [ ] **agent_skills/chat-history.md** — บันทึก session log การแชท
+- [ ] **agent_skills/Personas.md** — อัปเดตข้อมูล Persona ถ้ามีข้อมูลใหม่
 - [ ] **Welcome.md** — อัปเดตสถานะโปรเจกต์
 
 ### ตรวจสอบ Consistency

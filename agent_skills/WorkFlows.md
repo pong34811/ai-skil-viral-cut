@@ -10,7 +10,7 @@
 ┌──────────────────────────────────────────────────────────────┐
 │                       Step 0: Read All Skills                │
 │  อ่าน Skills.md, Rules.md, WorkFlows.md, Viral-Cut-Detection  │
-│  References.md, contents.md, plan.md, SKILL.md               │
+│  Personas.md, References.md, contents.md, plan.md, SKILL.md   │
 └──────────┬───────────────────────────────────────────────────┘
            │
            ▼
@@ -155,7 +155,8 @@
 │   1. agent_skills/References.md — เพิ่มรายการล่าสุด          │
 │   2. agent_skills/contents.md — ถ้ามีเกมใหม่ เพิ่มแถว        │
 │   3. agent_skills/chat-history.md — บันทึก session log       │
-│   4. Welcome.md — อัปเดตสถานะโปรเจกต์                        │
+│   4. agent_skills/Personas.md — อัปเดตข้อมูล Persona          │
+│   5. Welcome.md — อัปเดตสถานะโปรเจกต์                        │
 └──────────────────────────────────────────────────────────────┘
 ```
 
@@ -168,6 +169,7 @@
 - `Rules.md` — ข้อจำกัด, AI Behavior Rules
 - `WorkFlows.md` — ขั้นตอนทั้งหมด
 - `Viral-Cut-Detection.md` — เกณฑ์วิเคราะห์ 6 ด้าน + สูตรคะแนน
+- `Personas.md` — ข้อมูลผู้ใช้งานเป้าหมาย
 - `References.md` — ตัวอย่างผลงานก่อนหน้า
 - `contents.md` — เกมที่มีข้อมูลแล้ว
 - `plan.md` — Checklist ปฏิบัติการ
@@ -274,7 +276,8 @@
 
 1. **agent_skills/References.md** — เพิ่มรายการ viral cut ล่าสุด
 2. **agent_skills/contents.md** — ถ้ามีเกมใหม่ เพิ่มแถวในตารางพร้อมลิงค์ `contents/{ชื่อเกม}`
-3. **agent_skills/chat-history.md** — บันทึก session log การแชท
-4. **Welcome.md** — อัปเดตสถานะโปรเจกต์
+   3. **agent_skills/chat-history.md** — บันทึก session log การแชท
+   4. **agent_skills/Personas.md** — อัปเดตข้อมูล Persona ถ้ามีข้อมูลใหม่
+   5. **Welcome.md** — อัปเดตสถานะโปรเจกต์
 
 > ดูรายละเอียดเพิ่มเติมที่ [[../scripts/Scripts]]

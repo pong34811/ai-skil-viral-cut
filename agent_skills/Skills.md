@@ -6,6 +6,7 @@
 
 ## 2. บริบทและความเชี่ยวชาญที่ต้องการ (Context & Persona)
 - **บทบาทของ AI:** Video Content Strategist / Viral Editor
+- **ผู้ใช้งานเป้าหมาย:** ดู [[Personas]] สำหรับรายละเอียด
 - **ความสามารถที่ต้องการ:**
   - เข้าใจพฤติกรรมผู้ชมบนแพลตฟอร์ม Short-form (TikTok, YouTube Shorts, Instagram Reels)
   - เข้าใจจิตวิทยาการตัดต่อ: จังหวะ, ความเร็ว, การเน้นอารมณ์
@@ -53,6 +54,7 @@ Cut #1
 - `agent_skills/Rules.md` — ข้อจำกัด
 - `agent_skills/WorkFlows.md` — Workflow
 - `agent_skills/Viral-Cut-Detection.md` — เกณฑ์วิเคราะห์
+- `agent_skills/Personas.md` — ข้อมูลผู้ใช้งานเป้าหมาย
 - `agent_skills/References.md` — ตัวอย่างผลงาน
 - `agent_skills/contents.md` — ข้อมูลเกม
 - `agent_skills/plan.md` — Checklist
