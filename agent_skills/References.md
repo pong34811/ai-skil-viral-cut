@@ -95,4 +95,47 @@ Cut #4
 |------|--------|
 | SRT | `references/2026-06-16/ลบตัวละคร Elsword/ลบตัวละคร Elsword.srt` |
 | MD | `references/2026-06-16/ลบตัวละคร Elsword/ลบตัวละคร Elsword.md` |
+
+---
+
+## 2026-06-17
+
+**ไฟล์นำเข้า:** `raw/【🔴 COLAB】Cheese Rolling on Steam กับเพือน Vtuber _ 30_01_2026 _ #katy404live.mp4`
+
+**ชื่อไลฟ์:** 【🔴 COLAB】Cheese Rolling on Steam กับเพือน Vtuber _ 30_01_2026 _ #katy404live
+
+**เกม:** Cheese Rolling — [[../contents/Cheese Rolling]]
+
+### ผลลัพธ์
+
+| ไฟล์ | ที่อยู่ |
+|------|--------|
+| Excel | `outputs/viral-cut-2026-06-17.xlsx` |
+| Reference | `references/2026-06-17/viral-cut-2026-06-17.xlsx` |
+| SRT | `raw/【🔴 COLAB】Cheese Rolling on Steam กับเพือน Vtuber _ 30_01_2026 _ #katy404live.srt` |
+| JSON | `raw/【🔴 COLAB】Cheese Rolling on Steam กับเพือน Vtuber _ 30_01_2026 _ #katy404live.json` |
+
+### Viral Cuts
+
+```
+Cut #1 — Chaos / Humor (คะแนน: 6.7)
+- ชื่อคลิป: "Cabernet โว้ย! วิ่งไล่จับชีสกันจนเพี้ยน"
+- เวลา: 01:14:00 → 01:16:00 (2 นาที)
+
+Cut #2 — Chaos / Emotion (คะแนน: 6.6)
+- ชื่อคลิป: "จับไม่โดน! แม่งโคตรเกลียดเกมนี้ แต่สุดท้ายก็ได้!"
+- เวลา: 00:35:00 → 00:37:25 (2 นาที 25 วินาที)
+
+Cut #3 — Chaos (คะแนน: 6.3)
+- ชื่อคลิป: "เฮ้ย ๆ ๆ! ครั้งแรกกับ Cheese Rolling ที่โคตรโกลาหล"
+- เวลา: 00:31:55 → 00:33:30 (1 นาที 35 วินาที)
+
+Cut #4 — Humor / Interaction (คะแนน: 6.2)
+- ชื่อคลิป: "พี่ทำได้เว้ย! แต่พอมีน้องกลับพูดสุภาพ"
+- เวลา: 00:11:20 → 00:12:50 (1 นาที 30 วินาที)
+
+Cut #5 — Humor / Interaction (คะแนน: 6.1)
+- ชื่อคลิป: "จบกันเถอะ! สภาพ Vtuber หลังเล่น Cheese Rolling หนัก"
+- เวลา: 01:29:00 → 01:31:00 (2 นาที)
+```
 ```
