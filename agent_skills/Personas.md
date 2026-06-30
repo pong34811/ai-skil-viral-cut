@@ -22,7 +22,7 @@
 3. **Step 2:** ถอดเสียงด้วย Groq Whisper (auto-chunk 10 นาที) → `.srt` + `.json` → ตรวจคำผิดใน SRT
 4. **Step 3:** วิเคราะห์ 6 เกณฑ์ตาม [[Viral-Cut-Detection]] — Emotion / Chaos / Humor / Interaction / PlotTwist / Educational
 5. **Step 4:** ให้คะแนนถ่วงน้ำหนักตามสูตรใน [[Viral-Cut-Detection#การประเมินศักยภาพไวรัล-viral-potential-scoring]]
-6. **Step 5:** จัดลำดับตัด overlap → เลือก Top N cut (≥ 6.0 คะแนน, ≥ 40 วินาที ตาม [[Rules#2-ข้อจำกัดด้านระยะเวลา-duration-rules]])
+6. **Step 5:** จัดลำดับตัด overlap → เลือก Top N cut (≥ 6.0 คะแนน, ≥ 30 วินาที)
 7. **Step 6:** Export → `outputs/viral-cut-YYYY-MM-DD.xlsx` + `references/YYYY-MM-DD/`
 
 คัดเลือกช่วงที่น่าสนใจ เช่น:
@@ -73,7 +73,7 @@
 - ถอดเสียง Groq Whisper → `.srt` + `.json`
 - ตรวจคำผิดใน SRT (ชื่อเกม, ชื่อ Vtuber, คำภาษาไทย-อังกฤษ)
 - วิเคราะห์ transcript ตาม 6 เกณฑ์ → ให้คะแนน weighted score
-- เลือก Top N cut ที่ ≥ 6.0 คะแนน, ≥ 40 วินาที, ไม่ overlap
+- เลือก Top N cut ที่ ≥ 6.0 คะแนน, ≥ 30 วินาที, ไม่ overlap
 - Export Excel → `outputs/viral-cut-YYYY-MM-DD.xlsx`
 - สร้างไฟล์อ้างอิง → `references/YYYY-MM-DD/`
 - ตั้งชื่อคลิปและเขียนคำอธิบาย
