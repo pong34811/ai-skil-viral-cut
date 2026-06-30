@@ -39,7 +39,7 @@
   - [ ] `--srt` → `.srt` subtitle
   - [ ] `--json` → `.json` segments + words
   - [ ] ไฟล์ >25MB auto-chunk 10 นาที
-- [ ] ถ้า Error: check `scripts/.env` ว่ามี `GROQ_API_KEY` หรือไม่
+- [ ] ถ้า Error: check `.env` (project root) ว่ามี `GROQ_API_KEY` หรือไม่
 
 ## [x] Step 2.5: ตรวจทานคำผิด
 

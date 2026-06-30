@@ -19,7 +19,7 @@ def format_srt_time(seconds):
     milliseconds = int((seconds - int(seconds)) * 1000)
     return f"{hours:02d}:{minutes:02d}:{secs:02d},{milliseconds:03d}"
 
-def get_groq_data(file_path, file_bytes, word_level=False):
+def get_groq_data(file_path, file_bytes, word_level=False, retries=3):
     headers = {"Authorization": f"Bearer {API_KEY}"}
     data = {
         "model": "whisper-large-v3",
@@ -29,14 +29,18 @@ def get_groq_data(file_path, file_bytes, word_level=False):
     if word_level:
         data["timestamp_granularities"] = ["word"]
     files = {"file": (os.path.basename(file_path), file_bytes, "audio/mpeg" if file_path.endswith('.mp3') else "audio/wav")}
-    try:
-        resp = requests.post(API_URL, headers=headers, data=data, files=files, timeout=300)
-        resp.raise_for_status()
-        result = resp.json()
-        return result.get('segments') or [], result.get('words') or []
-    except Exception as e:
-        print(f"\n[API Error] {os.path.basename(file_path)}: {e}")
-        return [], []
+    for attempt in range(retries):
+        try:
+            resp = requests.post(API_URL, headers=headers, data=data, files=files, timeout=300)
+            resp.raise_for_status()
+            result = resp.json()
+            return result.get('segments') or [], result.get('words') or []
+        except Exception as e:
+            print(f"\n[API Error] {os.path.basename(file_path)} (attempt {attempt+1}/{retries}): {e}")
+            if attempt < retries - 1:
+                print("  Retrying in 5s...")
+                time.sleep(5)
+    return [], []
 
 def process_file(filename, request_word_timestamps, export_srt, export_json):
     file_size = os.path.getsize(filename)
@@ -55,8 +59,12 @@ def process_file(filename, request_word_timestamps, export_srt, export_json):
             "ffprobe", "-v", "error", "-show_entries", "format=duration",
             "-of", "default=noprint_wrappers=1:nokey=1", filename
         ]
-        result = subprocess.run(probe_cmd, capture_output=True, text=True)
-        total_duration_sec = float(result.stdout.strip())
+        try:
+            result = subprocess.run(probe_cmd, capture_output=True, text=True, check=True)
+            total_duration_sec = float(result.stdout.strip())
+        except (subprocess.CalledProcessError, FileNotFoundError) as e:
+            print(f"Error: ffprobe failed — is FFmpeg installed? {e}")
+            sys.exit(1)
         num_chunks = math.ceil(total_duration_sec / chunk_length_sec)
 
         with tqdm(total=num_chunks, desc="Processing video chunks", unit="chunk") as pbar:
@@ -70,7 +78,11 @@ def process_file(filename, request_word_timestamps, export_srt, export_json):
                     "-vn", "-acodec", "libmp3lame", "-b:a", "64k",
                     temp_chunk_path
                 ]
-                subprocess.run(ffmpeg_cmd, capture_output=True, check=True)
+                try:
+                    subprocess.run(ffmpeg_cmd, capture_output=True, check=True)
+                except (subprocess.CalledProcessError, FileNotFoundError) as e:
+                    print(f"Error: ffmpeg failed — is FFmpeg installed? {e}")
+                    sys.exit(1)
                 with open(temp_chunk_path, "rb") as f:
                     chunk_segs, chunk_wds = get_groq_data(temp_chunk_path, f.read(), word_level=request_word_timestamps)
                 for seg in chunk_segs:
@@ -114,12 +126,20 @@ if __name__ == "__main__":
     positional_args = [arg for arg in args if not arg.startswith('--')]
 
     if not positional_args:
-        mp4_files = [os.path.join("raw", f) for f in os.listdir("raw") if f.endswith(".mp4")]
+        raw_dir = os.path.join(script_dir, "..", "raw")
+        if not os.path.exists(raw_dir):
+            print(f"Error: raw/ directory not found at {raw_dir}")
+            sys.exit(1)
+        mp4_files = [os.path.join(raw_dir, f) for f in os.listdir(raw_dir) if f.endswith(".mp4")]
         if not mp4_files:
             print("Error: No .mp4 files found in raw/")
             sys.exit(1)
         filenames = mp4_files
     else:
+        for arg in positional_args:
+            if not arg.endswith('.mp4'):
+                print(f"Warning: '{arg}' doesn't end with .mp4, skipping")
+                sys.exit(1)
         filenames = [os.path.abspath(arg) for arg in positional_args]
 
     export_srt = '--srt' in flags or not any(f in flags for f in ['--srt', '--json'])

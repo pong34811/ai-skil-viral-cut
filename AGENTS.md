@@ -11,7 +11,7 @@ After every task completion (transcribe, analyze, export, edit, create, delete, 
 | 2 | `agent_skills/References.md` | เพิ่ม reference entries ใหม่ ถ้ามี cuts/clips ใหม่ |
 | 3 | `agent_skills/contents.md` | เพิ่มแถวเกมใหม่ในตาราง ถ้าสร้าง `contents/<game>.md` ใหม่ |
 | 4 | `agent_skills/plan.md` | ติ๊ก `[x]` steps ที่ทำเสร็จแล้ว |
-| 6 | `agent_skills/Personas.md` | อัปเดตข้อมูล Persona ถ้ามีข้อมูลใหม่ |
+| 5 | `agent_skills/Personas.md` | อัปเดตข้อมูล Persona ถ้ามีข้อมูลใหม่ |
 
 ## Consistency checks (หลังอัปเดตเสร็จ)
 

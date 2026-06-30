@@ -13,7 +13,6 @@
 │   ├── Viral-Cut-Detection.md   — เกณฑ์วิเคราะห์ 6 ด้าน + สูตรคะแนน + แหล่งอ้างอิง
 │   └── Rules.md                 — ข้อจำกัด, หลักเกณฑ์, Quality Checklist
 ├── scripts/
-│   ├── Scripts.md         — เอกสารการใช้งาน script
 │   ├── export_viral_cuts.py — Export Excel
 │   └── transcribe.py      — ถอดเสียงด้วย Groq API
 ├── .env                   — API keys (ไม่เข้า git)
@@ -28,6 +27,18 @@
 ```
 
 ## สถานะล่าสุด (2026-06-17)
+
+### ✅ Project Audit & Fixes (23 issues)
+✅ แก้ broken wiki link `[[scripts/Scripts]]` → `[[scripts/transcribe]]` + `[[scripts/export_viral_cuts]]`
+✅ แก้ `scripts/.env` → `.env` ใน `plan.md`
+✅ แก้ `Subtitle 1.srt` → ชื่อจริงใน 3 reference .md
+✅ แก้เลข AGENTS.md (4→6 → 4→5)
+✅ แก้ README.md: tree, casing, step numbers
+✅ แก้ WorkFlows.md: indent, Chinese char `转录`, broken link
+✅ แก้ transcribe.py: hardcoded path, ffmpeg/ffprobe error handling, .mp4 validation, API retry
+✅ สร้าง `requirements.txt` + `.env.example`
+✅ แก้ "การจอ" → "การ์ดจอ" ใน reference MD
+✅ เก็บ `outputs/` + `references/` ไว้ตามที่ขอ
 
 ### ✅ Auto-Obsidian Update (AGENTS.md)
 ✅ สร้าง `AGENTS.md` — AI อัปเดตไฟล์ Obsidian อัตโนมัติหลังทำงานเสร็จทุกครั้ง
@@ -71,4 +82,4 @@
 4. ดู [[agent_skills/WorkFlows]] สำหรับขั้นตอน
 5. ตรวจสอบ [[agent_skills/Rules]] สำหรับข้อควรระวัง
 6. ดู [[agent_skills/References]] สำหรับตัวอย่างผลงานที่ผ่านมา
-7. ใช้ [[scripts/Scripts]] สำหรับ Export ผลลัพธ์
+7. ใช้ [[scripts/transcribe]] สำหรับถอดเสียง และ [[scripts/export_viral_cuts]] สำหรับ Export ผลลัพธ์
