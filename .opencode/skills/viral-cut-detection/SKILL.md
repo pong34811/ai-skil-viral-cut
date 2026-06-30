@@ -28,7 +28,7 @@ score = (emotion * 0.20) + (chaos * 0.20) + (humor * 0.20) + (interaction * 0.15
 
 ## Key Rules
 
-- Each cut **≥ 40 seconds**; expand context if shorter
+- Each cut **≥ 30 seconds**; cut as-is if shorter, no context padding
 - **No overlapping** timelines; merge if < 30 s apart
 - No cut below score threshold (6.0 short / 5.0 long)
 - Tie-breaker priority: Chaos > Humor > Interaction
