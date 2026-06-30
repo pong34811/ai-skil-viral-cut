@@ -96,7 +96,7 @@ duration: 3:45:00
 ## 8. Tools & Integration
 - **FFmpeg** — ตัดต่อ, วิเคราะห์, ดึงข้อมูลวิดีโอ
 - **Groq API (Whisper)** — ถอดเสียง `.mp4` เป็น `.srt` / `.json` ผ่าน `scripts/transcribe.py` (auto-chunk ไฟล์ >25MB)
-- **Python Scripts** — `scripts/transcribe.py` (ถอดเสียง), `scripts/export_viral_cuts.py` (export Excel)
+- **Python Scripts** — `scripts/transcribe.py` (ถอดเสียง), `scripts/export_viral_cuts.py` (export Excel), `scripts/cut_clips.py` (ตัดคลิป)
 - **.env** — เก็บ `GROQ_API_KEY` สำหรับเรียกใช้ API
 - **Web Fetch** — ค้นหาข้อมูลเพิ่มเติมเกี่ยวกับเหตุการณ์หรือกระแส
 - **File System** — อ่านและตรวจสอบไฟล์วิดีโอ

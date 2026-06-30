@@ -18,7 +18,7 @@
 
 | ไฟล์ | ที่อยู่ |
 |------|--------|
-| Excel | `outputs/viral-cut-2026-06-30.xlsx` |
+| Excel | `outputs/2026-06-30/viral-cut-2026-06-30.xlsx` |
 | Reference | `references/2026-06-30/viral-cut-2026-06-30.xlsx` |
 | SRT | `raw/【🔴 LIVE】Minecraft   _ 27_04_2026 _ #katy404live.srt` |
 | JSON | `raw/【🔴 LIVE】Minecraft   _ 27_04_2026 _ #katy404live.json` |

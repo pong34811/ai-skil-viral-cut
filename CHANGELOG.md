@@ -4,6 +4,18 @@
 
 ---
 
+## 2026-06-30 — ตัดคลิป + Fix ffmpeg auto-detect
+
+### Added
+- `scripts/cut_clips.py` — auto-detect ffmpeg path (WinGet), `errors="replace"` fix Windows UnicodeDecodeError
+- ตัดคลิป Minecraft 4 คลิป → `outputs/2026-06-30/clips/`
+
+### Changed
+- เปลี่ยน output structure: `outputs/YYYY-MM-DD/viral-cut-YYYY-MM-DD.xlsx` + `clips/`
+- Docs: plan.md, WorkFlows.md, README.md, Welcome.md, Rules.md, Personas.md, SKILL.md paths
+
+---
+
 ## 2026-06-30 — ปรับ Viral Cuts Minecraft ตามคำขอ
 
 ### Changed

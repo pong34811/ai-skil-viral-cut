@@ -123,7 +123,7 @@
 
 ### 7.4 Export Requirements
 - **Export ต้องมีทั้งสองที่เสมอ:**
-  - `outputs/viral-cut-YYYY-MM-DD.xlsx` — ไฟล์ผลลัพธ์หลัก
+  - `outputs/YYYY-MM-DD/viral-cut-YYYY-MM-DD.xlsx` — ไฟล์ผลลัพธ์หลัก
   - `references/YYYY-MM-DD/viral-cut-YYYY-MM-DD.xlsx` — ไฟล์อ้างอิง
 - ห้าม export แค่ที่ใดที่หนึ่ง
 

@@ -101,8 +101,14 @@
 from scripts.export_viral_cuts import export_all
 export_all(cuts)
 ```
-- [x] เช็ค `outputs/viral-cut-YYYY-MM-DD.xlsx` — ผลลัพธ์หลัก
+- [x] เช็ค `outputs/YYYY-MM-DD/viral-cut-YYYY-MM-DD.xlsx` — ผลลัพธ์หลัก
 - [x] เช็ค `references/YYYY-MM-DD/viral-cut-YYYY-MM-DD.xlsx` — อ้างอิง
+
+## [x] Step 6: ตัดคลิปวิดีโอ
+
+> ใช้ `scripts/cut_clips.py` เพื่อตัดไฟล์ .mp4 ตาม timestamp จาก Excel
+
+- [x] รัน `python scripts/cut_clips.py "raw/<file>.mp4" --cuts "outputs/viral-cut-2026-06-30.xlsx"`
 
 ## [x] Step 7: อัปเดตไฟล์ + ตรวจสอบ Consistency
 

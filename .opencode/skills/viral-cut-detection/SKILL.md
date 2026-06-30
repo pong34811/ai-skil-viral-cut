@@ -18,7 +18,7 @@ Viral Cut Detector analyzes livestream `.mp4` files to find and rank the most en
 3. **Score** — rate each segment 1-10 on 6 criteria, compute weighted total
 4. **Select** — rank by score, enforce min thresholds (≥6.0 short-form / ≥5.0 long-form), deduplicate overlaps
 5. **Output** — format per Output Schema (Category, Title, Start/End time HH:MM:SS, Filename, Duration)
-6. **Export** — `export_all(cuts)` → `outputs/viral-cut-YYYY-MM-DD.xlsx`, copy to `references/YYYY-MM-DD/`
+6. **Export** — `export_all(cuts)` → `outputs/YYYY-MM-DD/viral-cut-YYYY-MM-DD.xlsx`, copy to `references/YYYY-MM-DD/`
 
 ## Scoring Formula
 

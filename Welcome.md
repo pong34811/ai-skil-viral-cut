@@ -9,7 +9,7 @@
 ├── agent_skills/
 │   ├── References.md            — ตัวอย่างผลงานจริง ใช้อ้างอิง
 │   ├── Skills.md                — ภาพรวม Skill, Output Schema
-│   ├── WorkFlows.md             — ขั้นตอนการทำงาน 6 Step
+│   ├── WorkFlows.md             — ขั้นตอนการทำงาน 8 Step
 │   ├── Viral-Cut-Detection.md   — เกณฑ์วิเคราะห์ 6 ด้าน + สูตรคะแนน + แหล่งอ้างอิง
 │   ├── Rules.md                 — ข้อจำกัด, หลักเกณฑ์, Quality Checklist
 │   ├── Personas.md              — ข้อมูลผู้ใช้งานเป้าหมาย
@@ -21,7 +21,10 @@
 │   └── transcribe.py      — ถอดเสียงด้วย Groq API
 ├── .env                   — API keys (ไม่เข้า git)
 ├── raw/                   — วางไฟล์ .mp4 ที่นำเข้า
-├── outputs/               — ไฟล์ผลลัพธ์ .xlsx
+├── outputs/               — ผลลัพธ์แบ่งตามวันที่
+│   └── YYYY-MM-DD/
+│       ├── viral-cut-YYYY-MM-DD.xlsx
+│       └── clips/         — คลิปที่ตัดแล้ว (.mp4)
 ├── references/            — ข้อมูลอ้างอิงแบ่งตามวันที่
 │   └── YYYY-MM-DD/
 │       └── viral-cut-YYYY-MM-DD.xlsx
@@ -64,7 +67,8 @@
 ✅ ถอดเสียง Groq Whisper (1425 segments, 83:33 นาที, 9 chunks)
 ✅ ตรวจทานคำผิด SRT (ธนู, เมอร์เดอร์, ชื่อผู้เล่น)
 ✅ วิเคราะห์ 6 Viral Cuts → ปรับเหลือ 4 Cuts (ลบ #1–3, เพิ่ม "อิมพอดเตอร์ก็ไม่เท่าไร")
-✅ Export → `outputs/viral-cut-2026-06-30.xlsx`
+✅ Export → `outputs/2026-06-30/viral-cut-2026-06-30.xlsx`
+✅ ตัดคลิป 4 ไฟล์ → `outputs/2026-06-30/clips/`
 ✅ สร้าง `contents/Minecraft.md`
 ✅ อัปเดต `References.md`, `contents.md`
 

@@ -24,7 +24,7 @@ node_modules/
 *.mp4
 raw/
 
-# Generated outputs
+# Generated outputs + clips
 outputs/
 
 # References (binary copies of outputs)

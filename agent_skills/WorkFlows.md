@@ -142,7 +142,7 @@
 │                                                              │
 │   export_viral_cuts.py                                       │
 │                                                              │
-│   → outputs/viral-cut-YYYY-MM-DD.xlsx                        │
+│   → outputs/YYYY-MM-DD/viral-cut-YYYY-MM-DD.xlsx               │
 │   → references/YYYY-MM-DD/viral-cut-YYYY-MM-DD.xlsx          │
 │                                                              │
 │   (Optional: JSON / CSV / EDL)                               │
@@ -159,10 +159,16 @@
 └──────────────────────────────────────────────────────────────┘
 ```
 
-## Step 0: อ่าน Skill ทั้งหมดก่อนเริ่ม
+## Step 0: อ่าน Skill + Setup
 
 > ดู checklist เต็มใน [[plan#step-0-อ่าน-skill-ทั้งหมดก่อนเริ่ม]]
 
+### Setup (ทำครั้งแรก)
+- รัน `pip install -r requirements.txt` — ติดตั้ง dependencies
+- ตรวจสอบ `.env` — ต้องมี `GROQ_API_KEY`
+- ตรวจสอบ FFmpeg — `ffmpeg -version` ต้องใช้งานได้
+
+### อ่านเอกสาร
 ก่อนเริ่ม Step 1 ต้องอ่านเอกสารทั้งหมดเพื่อทำความเข้าใจภาพรวม:
 - `Skills.md` — ภาพรวม, Output Schema
 - `Rules.md` — ข้อจำกัด, AI Behavior Rules
@@ -248,30 +254,43 @@
    - ความยาวคลิป (Duration)
 3. ตรวจสอบความถูกต้องผ่าน Quality Checklist ใน [[Rules]]
 
-## Step 6: Export & ส่งมอบ
+## Step 6: ตัดคลิปวิดีโอ
+
+> ใช้ `scripts/cut_clips.py` เพื่อตัดไฟล์ .mp4 ตาม timestamp
+
+1. รันคำสั่ง:
+   ```
+   python scripts/cut_clips.py "raw/<file>.mp4" --cuts "outputs/YYYY-MM-DD/viral-cut-YYYY-MM-DD.xlsx"
+   ```
+2. คลิปที่ตัดจะอยู่ที่ `outputs/YYYY-MM-DD/clips/` — ตั้งชื่อไฟล์: `{title}.mp4` (ชื่อจาก Excel)
+3. ตรวจสอบว่าคลิปไม่ corrupted (ใช้ ffprobe)
+
+## Step 7: Export & ส่งมอบ
 
 1. **Export หลัก** — ใช้ `scripts/export_viral_cuts.py`:
    ```python
    from scripts.export_viral_cuts import export_all
    export_all(cuts)  # auto ใช้วันที่ UTC ปัจจุบัน
    ```
-   - `outputs/viral-cut-YYYY-MM-DD.xlsx` — ไฟล์ผลลัพธ์หลัก
+   - `outputs/YYYY-MM-DD/viral-cut-YYYY-MM-DD.xlsx` — ไฟล์ผลลัพธ์หลัก
    - `references/YYYY-MM-DD/viral-cut-YYYY-MM-DD.xlsx` — ไฟล์อ้างอิง
 
 2. โครงสร้างไฟล์หลัง export:
    ```
    outputs/
-     viral-cut-2026-06-10.xlsx
+      2026-06-10/
+        viral-cut-2026-06-10.xlsx
+        clips/   (ถ้ารัน Step 6)
    references/
-     2026-06-10/
-       viral-cut-2026-06-10.xlsx
+      2026-06-10/
+        viral-cut-2026-06-10.xlsx
    ```
 
 3. (Optional) Export เพิ่มเติมเป็น JSON / CSV / EDL สำหรับการตัดต่อ
 
 4. ส่งมอบรายการให้ผู้ใช้
 
-## Step 7: อัปเดตไฟล์อ้างอิง
+## Step 8: อัปเดตไฟล์อ้างอิง
 
 1. **agent_skills/References.md** — เพิ่มรายการ viral cut ล่าสุด
 2. **agent_skills/contents.md** — ถ้ามีเกมใหม่ เพิ่มแถวในตารางพร้อมลิงค์ `contents/{ชื่อเกม}`
