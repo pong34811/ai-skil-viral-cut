@@ -79,7 +79,7 @@ Cut #1
 1. ผู้ใช้ส่ง prompt พร้อม `video_path`, `title`, `metadata`
 2. AI เปิด `agent_skills/plan.md` และทำตาม `[ ]` ทีละขั้นตอน
 3. เมื่อจบแต่ละ step ให้ติ๊ก `[x]` เสร็จแล้วแจ้งผู้ใช้
-4. เมื่อจบทั้งหมด ให้อัปเดต Welcome.md + ตรวจสอบ consistency ตาม [[Rules#7.3-post-task-updates]]
+4. เมื่อจบทั้งหมด ให้อัปเดต Welcome.md + ตรวจสอบ consistency ตาม [[Rules#7.7-post-task-updates]]
 
 ## 7. ตัวอย่าง (Example)
 
