@@ -5,6 +5,7 @@
 ## โครงสร้าง vault
 
 ```
+├── AGENTS.md              — Auto-update Obsidian instructions
 ├── agent_skills/
 │   ├── References.md            — ตัวอย่างผลงานจริง ใช้อ้างอิง
 │   ├── Skills.md                — ภาพรวม Skill, Output Schema
@@ -21,10 +22,19 @@
 ├── references/            — ข้อมูลอ้างอิงแบ่งตามวันที่
 │   └── YYYY-MM-DD/
 │       └── viral-cut-YYYY-MM-DD.xlsx
+├── docs/
+│   └── superpowers/specs/ — Design documents
 └── Welcome.md
 ```
 
 ## สถานะล่าสุด (2026-06-17)
+
+### ✅ Auto-Obsidian Update (AGENTS.md)
+✅ สร้าง `AGENTS.md` — AI อัปเดตไฟล์ Obsidian อัตโนมัติหลังทำงานเสร็จทุกครั้ง
+✅ แก้ไข path ใน AGENTS.md: `chat-history.md` → `agent_skills/chat-history.md`, `plan.md` → `agent_skills/plan.md`
+✅ อัปเดต Welcome.md tree structure + wikilink ไปยัง AGENTS.md
+✅ สร้าง design doc ที่ `docs/superpowers/specs/2026-06-17-auto-obsidian-update-design.md`
+✅ ลบ `agent_skills/chat-history.md` (ใช้ superpowers แทนแล้ว)
 
 ### Cheese Rolling collab (ล่าสุด)
 ✅ ถอดเสียง Groq (1510 segments, 98.85 นาที)
@@ -32,7 +42,7 @@
 ✅ วิเคราะห์ 5 Viral Cuts
 ✅ Export → `outputs/viral-cut-2026-06-17.xlsx`
 ✅ สร้าง `contents/Cheese Rolling.md`
-✅ อัปเดต `References.md` + `chat-history.md`
+✅ อัปเดต `References.md`
 
 ### ลบตัวละคร Elsword (Reference clip)
 ✅ ตรวจทานคำผิด SRT
@@ -54,6 +64,7 @@
 ---
 
 ## เริ่มต้น
+0. ดู [[AGENTS]] สำหรับพฤติกรรม AI ในการอัปเดตไฟล์อัตโนมัติ
 1. วางไฟล์ `.mp4` ใน `raw/`
 2. รัน `python scripts/transcribe.py` เพื่อถอดเสียง
 3. เปิด [[agent_skills/Skills]] เพื่อดูเกณฑ์การวิเคราะห์

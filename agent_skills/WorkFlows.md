@@ -154,8 +154,7 @@
 │                                                              │
 │   1. agent_skills/References.md — เพิ่มรายการล่าสุด          │
 │   2. agent_skills/contents.md — ถ้ามีเกมใหม่ เพิ่มแถว        │
-│   3. agent_skills/chat-history.md — บันทึก session log       │
-│   4. agent_skills/Personas.md — อัปเดตข้อมูล Persona          │
+│   3. agent_skills/Personas.md — อัปเดตข้อมูล Persona          │
 │   5. Welcome.md — อัปเดตสถานะโปรเจกต์                        │
 └──────────────────────────────────────────────────────────────┘
 ```
@@ -276,8 +275,7 @@
 
 1. **agent_skills/References.md** — เพิ่มรายการ viral cut ล่าสุด
 2. **agent_skills/contents.md** — ถ้ามีเกมใหม่ เพิ่มแถวในตารางพร้อมลิงค์ `contents/{ชื่อเกม}`
-   3. **agent_skills/chat-history.md** — บันทึก session log การแชท
-   4. **agent_skills/Personas.md** — อัปเดตข้อมูล Persona ถ้ามีข้อมูลใหม่
-   5. **Welcome.md** — อัปเดตสถานะโปรเจกต์
+   3. **agent_skills/Personas.md** — อัปเดตข้อมูล Persona ถ้ามีข้อมูลใหม่
+   4. **Welcome.md** — อัปเดตสถานะโปรเจกต์
 
 > ดูรายละเอียดเพิ่มเติมที่ [[../scripts/Scripts]]

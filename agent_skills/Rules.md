@@ -113,7 +113,6 @@
 - [ ] **plan.md** — ติ๊ก `[x]` ทุก Step ที่ทำเสร็จแล้ว
 - [ ] **References.md** — เพิ่ม reference ถ้ามี cuts / clips ใหม่
 - [ ] **contents.md** — เพิ่มแถวเกมใหม่ ถ้ามี
-- [ ] **chat-history.md** — **ทุกครั้ง** บันทึก session log การแชทของรอบนั้น
 - [ ] **Personas.md** — อัปเดตข้อมูล Persona ถ้ามีข้อมูลใหม่
 - [ ] **Welcome.md** — อัปเดตสถานะล่าสุดของโปรเจกต์
 

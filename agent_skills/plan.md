@@ -114,7 +114,6 @@ export_all(cuts)
 - [ ] **plan.md** — ติ๊ก `[x]` ทุก Step ที่ทำเสร็จแล้วทันที (อย่ารอเก็บทีเดียว)
 - [ ] **agent_skills/References.md** — เพิ่มรายการ cuts ล่าสุด
 - [ ] **agent_skills/contents.md** — ถ้ามีเกมใหม่ เพิ่มแถวในตารางลิงค์ไป `contents/{ชื่อเกม}`
-- [ ] **agent_skills/chat-history.md** — บันทึก session log การแชท
 - [ ] **agent_skills/Personas.md** — อัปเดตข้อมูล Persona ถ้ามีข้อมูลใหม่
 - [ ] **Welcome.md** — อัปเดตสถานะโปรเจกต์
 

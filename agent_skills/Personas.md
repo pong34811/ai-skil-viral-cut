@@ -77,6 +77,6 @@
 - Export Excel → `outputs/viral-cut-YYYY-MM-DD.xlsx`
 - สร้างไฟล์อ้างอิง → `references/YYYY-MM-DD/`
 - ตั้งชื่อคลิปและเขียนคำอธิบาย
-- อัปเดต `References.md`, `contents.md`, `chat-history.md`, `Welcome.md`
+- อัปเดต `References.md`, `contents.md`, `Welcome.md`
 
 AI ช่วยให้มินตราลดเวลาทำงานจากหลายชั่วโมงเหลือเพียง pipeline เดียว ตั้งแต่ raw .mp4 → Excel ที่พร้อมใช้งาน
