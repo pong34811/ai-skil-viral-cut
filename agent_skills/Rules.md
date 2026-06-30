@@ -91,10 +91,10 @@
 ## 6. Output Format Compliance
 
 ผลลัพธ์ต้องเป็นไปตาม Schema ใน [[Skills#5-output-schema]] เท่านั้น
-- ห้ามเพิ่มฟิลด์ที่ไม่ได้กำหนด
-- ห้ามละเว้นฟิลด์ที่จำเป็น
+- ห้ามละเว้นฟิลด์ที่จำเป็น (category, title, start_time, end_time, filename, duration, score)
 - Timestamp ต้องอยู่ในรูปแบบ HH:MM:SS เท่านั้น
 - ชื่อไฟล์นำเข้าต้องมีนามสกุล .mp4 และตรงกับไฟล์ที่รับเข้ามา
+- คะแนน Viral ต้องเป็นตัวเลขทศนิยม 2 ตำแหน่ง (X.XX)
 
 ---
 

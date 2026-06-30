@@ -27,6 +27,9 @@ raw/
 # Generated outputs
 outputs/
 
+# References (binary copies of outputs)
+references/
+
 # Python cache
 __pycache__/
 *.pyc

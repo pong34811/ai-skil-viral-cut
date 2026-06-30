@@ -22,7 +22,7 @@ def export_viral_cuts_to_excel(cuts, output_path=None):
 
     headers = [
         "#", "ประเภท (Category)", "ชื่อคลิป", "เวลาเริ่มต้น", "เวลาสิ้นสุด",
-        "ชื่อไฟล์นำเข้า (.mp4)", "ความยาวคลิป (Duration)"
+        "ชื่อไฟล์นำเข้า (.mp4)", "ความยาวคลิป (Duration)", "คะแนน Viral"
     ]
 
     for col, header in enumerate(headers, 1):
@@ -44,6 +44,7 @@ def export_viral_cuts_to_excel(cuts, output_path=None):
             cut.get("end_time", ""),
             cut.get("filename", ""),
             cut.get("duration", ""),
+            cut.get("score", ""),
         ]
         for col, value in enumerate(values, 1):
             cell = ws.cell(row=row_idx, column=col, value=value)
@@ -51,7 +52,7 @@ def export_viral_cuts_to_excel(cuts, output_path=None):
             cell.alignment = data_align
             cell.border = thin_border
 
-    col_widths = [5, 22, 40, 14, 14, 30, 22]
+    col_widths = [5, 22, 40, 14, 14, 30, 22, 14]
     for i, width in enumerate(col_widths, 1):
         ws.column_dimensions[get_column_letter(i)].width = width
 
@@ -59,7 +60,7 @@ def export_viral_cuts_to_excel(cuts, output_path=None):
     for row in range(2, len(cuts) + 2):
         ws.row_dimensions[row].height = 40
 
-    ws.auto_filter.ref = f"A1:G{len(cuts) + 1}"
+    ws.auto_filter.ref = f"A1:H{len(cuts) + 1}"
 
     os.makedirs(os.path.dirname(output_path) if os.path.dirname(output_path) else ".", exist_ok=True)
     wb.save(output_path)

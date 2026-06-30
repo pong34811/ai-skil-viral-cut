@@ -12,6 +12,7 @@ After every task completion (transcribe, analyze, export, edit, create, delete, 
 | 3 | `agent_skills/contents.md` | เพิ่มแถวเกมใหม่ในตาราง ถ้าสร้าง `contents/<game>.md` ใหม่ |
 | 4 | `agent_skills/plan.md` | ติ๊ก `[x]` steps ที่ทำเสร็จแล้ว |
 | 5 | `agent_skills/Personas.md` | อัปเดตข้อมูล Persona ถ้ามีข้อมูลใหม่ |
+| 6 | `CHANGELOG.md` | เพิ่ม entry วันที่ล่าสุดพร้อมรายการเปลี่ยนแปลง |
 
 ## Consistency checks (หลังอัปเดตเสร็จ)
 
@@ -20,3 +21,5 @@ After every task completion (transcribe, analyze, export, edit, create, delete, 
 - [ ] ไฟล์ใหม่ (.md) ทุกไฟล์มี wiki link เชื่อมโยงใน Welcome.md หรือ index files
 - [ ] timestamp format: `HH:MM:SS` เท่านั้น
 - [ ] output filenames ใช้ UTC date (`YYYY-MM-DD`)
+- [ ] `TEMPLATE.md` ไม่ควรมีในตาราง contents.md (เป็น template ไม่ใช่เกม)
+- [ ] `CHANGELOG.md` ตรงกับสถานะล่าสุดใน Welcome.md

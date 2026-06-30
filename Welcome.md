@@ -11,7 +11,11 @@
 │   ├── Skills.md                — ภาพรวม Skill, Output Schema
 │   ├── WorkFlows.md             — ขั้นตอนการทำงาน 6 Step
 │   ├── Viral-Cut-Detection.md   — เกณฑ์วิเคราะห์ 6 ด้าน + สูตรคะแนน + แหล่งอ้างอิง
-│   └── Rules.md                 — ข้อจำกัด, หลักเกณฑ์, Quality Checklist
+│   ├── Rules.md                 — ข้อจำกัด, หลักเกณฑ์, Quality Checklist
+│   ├── Personas.md              — ข้อมูลผู้ใช้งานเป้าหมาย
+│   ├── contents.md              — ตารางข้อมูลเกมทั้งหมด
+│   ├── plan.md                  — Checklist ปฏิบัติการ
+│   └── TROUBLESHOOTING.md       — ปัญหาที่พบบ่อย + วิธีแก้
 ├── scripts/
 │   ├── export_viral_cuts.py — Export Excel
 │   └── transcribe.py      — ถอดเสียงด้วย Groq API
@@ -21,12 +25,21 @@
 ├── references/            — ข้อมูลอ้างอิงแบ่งตามวันที่
 │   └── YYYY-MM-DD/
 │       └── viral-cut-YYYY-MM-DD.xlsx
+├── contents/                  — ข้อมูลเกมสำหรับอ้างอิง
+│   ├── Arena of Valor.md
+│   ├── Castle Crashers.md
+│   ├── Cheese Rolling.md
+│   ├── Minecraft.md
+│   └── TEMPLATE.md            — แม่แบบสำหรับเกมใหม่
 ├── docs/
-│   └── superpowers/specs/ — Design documents
-└── Welcome.md
+│   └── superpowers/specs/     — Design documents
+├── example.txt                — Template prompt สำหรับเริ่มงาน
+├── CHANGELOG.md               — ประวัติการเปลี่ยนแปลง
+├── Welcome.md                 — หน้าแรกของ vault
+└── AGENTS.md                  — Auto-update Obsidian instructions
 ```
 
-## สถานะล่าสุด (2026-06-17)
+## สถานะล่าสุด (2026-06-30)
 
 ### ✅ Project Audit & Fixes (23 issues)
 ✅ แก้ broken wiki link `[[scripts/Scripts]]` → `[[scripts/transcribe]]` + `[[scripts/export_viral_cuts]]`
@@ -47,7 +60,15 @@
 ✅ สร้าง design doc ที่ `docs/superpowers/specs/2026-06-17-auto-obsidian-update-design.md`
 ✅ ลบ `agent_skills/chat-history.md` (ใช้ superpowers แทนแล้ว)
 
-### Cheese Rolling collab (ล่าสุด)
+### Minecraft Murder/Bed Wars (ล่าสุด — 2026-06-30)
+✅ ถอดเสียง Groq Whisper (1425 segments, 83:33 นาที, 9 chunks)
+✅ ตรวจทานคำผิด SRT (ธนู, เมอร์เดอร์, ชื่อผู้เล่น)
+✅ วิเคราะห์ 6 Viral Cuts
+✅ Export → `outputs/viral-cut-2026-06-30.xlsx`
+✅ สร้าง `contents/Minecraft.md`
+✅ อัปเดต `References.md`, `contents.md`
+
+### Cheese Rolling collab
 ✅ ถอดเสียง Groq (1510 segments, 98.85 นาที)
 ✅ ตรวจทานคำผิด SRT
 ✅ วิเคราะห์ 5 Viral Cuts
@@ -82,4 +103,6 @@
 4. ดู [[agent_skills/WorkFlows]] สำหรับขั้นตอน
 5. ตรวจสอบ [[agent_skills/Rules]] สำหรับข้อควรระวัง
 6. ดู [[agent_skills/References]] สำหรับตัวอย่างผลงานที่ผ่านมา
-7. ใช้ [[scripts/transcribe]] สำหรับถอดเสียง และ [[scripts/export_viral_cuts]] สำหรับ Export ผลลัพธ์
+7. ดู [[agent_skills/TROUBLESHOOTING]] เมื่อเจอปัญหา
+8. ใช้ [[scripts/transcribe]] สำหรับถอดเสียง และ [[scripts/export_viral_cuts]] สำหรับ Export ผลลัพธ์
+9. ดู [[CHANGELOG]] สำหรับประวัติการเปลี่ยนแปลง
