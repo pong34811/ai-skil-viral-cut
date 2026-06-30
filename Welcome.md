@@ -63,7 +63,7 @@
 ### Minecraft Murder/Bed Wars (ล่าสุด — 2026-06-30)
 ✅ ถอดเสียง Groq Whisper (1425 segments, 83:33 นาที, 9 chunks)
 ✅ ตรวจทานคำผิด SRT (ธนู, เมอร์เดอร์, ชื่อผู้เล่น)
-✅ วิเคราะห์ 6 Viral Cuts
+✅ วิเคราะห์ 6 Viral Cuts → ปรับเหลือ 4 Cuts (ลบ #1–3, เพิ่ม "อิมพอดเตอร์ก็ไม่เท่าไร")
 ✅ Export → `outputs/viral-cut-2026-06-30.xlsx`
 ✅ สร้าง `contents/Minecraft.md`
 ✅ อัปเดต `References.md`, `contents.md`
